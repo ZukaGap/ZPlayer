@@ -1,6 +1,7 @@
 var video = document.querySelector(".video");
 var juice = document.querySelector(".orange-juice");
 var btn = document.getElementById("play-pause");
+MuteBtn = document.getElementById("mute-unmute");
 currentTime = document.getElementById("current-time");
 fullTime = document.getElementById("full-time");
 
@@ -34,3 +35,22 @@ video.addEventListener("timeupdate", function(){
     fltm = parseInt(fltm / 60 , 10) + ":" + fltm % 60;
     fullTime.innerHTML = fltm;
 })
+
+
+function toggleMuteUnMute()
+{
+    if(video.muted)
+    {
+        MuteBtn.className = "mute";
+        video.muted = false;
+    }     
+    else
+    {
+        MuteBtn.className = "unmute";
+        video.muted = true;
+    }
+}
+
+MuteBtn.onclick = function() {
+    toggleMuteUnMute();
+};

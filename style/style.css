@@ -27,16 +27,16 @@
     bottom: 0;
     width: 100%;
     flex-wrap: wrap;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.5);
     transform: translateY(100%) translateY(-5px);
     transition: all 0.8s;
 }
 
-.buttons {
+.buttons,.speaker {
     padding: 10px;
 }
 
-.buttons button {
+.buttons button, .speaker button {
     background: none;
     border: 0;
     outline: 0;
@@ -45,14 +45,14 @@
 
 .buttons .time {
     display: inline;
-    font-size: 107%;
+    font-size: 135%;
 }
 
 .time {
     color:red;
 }
 
-.buttons button::before {
+.buttons button:before {
     content:"\f144";
     font-family: "Font Awesome 5 Free";
     width: 30px;
@@ -69,6 +69,25 @@
 
 .buttons button.pause:before {
     content: "\f28b";
+}
+
+.speaker button:before {
+    content: "\f83c";
+    font-family: "Font Awesome 5 Free";
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    font-size: 28px;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+.buttons button.unmute:before {
+    content: "\f028 ";
+}
+
+.buttons button.mute:before {
+    content: "\f6a9";
 }
 
 .orange-bar {
