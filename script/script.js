@@ -54,3 +54,18 @@ function toggleMuteUnMute()
 MuteBtn.onclick = function() {
     toggleMuteUnMute();
 };
+
+
+/* Open File */
+
+function readSingleFile(e) {
+    var file = e.target.files[0];
+    if (!file) {
+      return;
+    }
+    console.log(file);
+    
+    document.getElementById("video-player").src =file.name;
+  }
+
+  document.getElementById('file-input').addEventListener('change', readSingleFile, false);
