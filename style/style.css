@@ -43,6 +43,15 @@
     cursor: pointer;
 }
 
+.buttons .time {
+    display: inline;
+    font-size: 107%;
+}
+
+.time {
+    color:red;
+}
+
 .buttons button::before {
     content:"\f144";
     font-family: "Font Awesome 5 Free";
